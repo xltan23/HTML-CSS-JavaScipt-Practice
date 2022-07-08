@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/todos.css">
+    <script src="/todos.js"></script>
+</head>
+<body>
+    <h1 id="myHeader">TO DO LIST</h1>
+    <p>
+        <input type="button" id="addButton" value="Add" onclick="addTask()" />
+        <input type="text" id="input" placeholder="enter task ..." />
+    </p>
+
+    <ul id="tasks">
+        <li>
+            <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+            <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+            <input type="button" class="important" onclick="important(this.parentNode)" value="!" />
+            Practice Taekwondo
+        </li>
+        <li>
+            <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+            <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+            <input type="button" class="important" onclick="important(this.parentNode)" value="!" />
+            Do Statics/Gym
+        </li>
+        <li>
+            <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+            <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+            <input type="button" class="important" onclick="important(this.parentNode)" value="!" />
+            Practice Java on Coursera
+        </li>
+    </ul>
+
+    <div id="divabout">
+    
+    </div>
+    <input type="button" value="About" onclick="doAbout()">
+    <input type="button" value="Clear" onclick="clearAbout()">
+
+</body>
+</html>

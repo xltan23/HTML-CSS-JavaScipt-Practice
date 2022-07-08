@@ -1,0 +1,101 @@
+// write your code here
+var image = new SimpleImage("hilton.jpg");
+for (var pixel of image.values()) {
+    if (pixel.getX() <= image.width/3) {
+        pixel.setRed(255);
+    }
+    if (image.width/3 < pixel.getX() && pixel.getX() <= image.width*2/3) {
+        pixel.setGreen(255);
+    }
+    if (pixel.getX() >= image.width*2/3) {
+        pixel.setBlue(255);
+    }
+}
+//print(image);
+
+function swapRedGreen(fileName) {
+    var image = new SimpleImage(fileName);
+    for (var pixel of image.values()) {
+        if (pixel.getX() <= image.width) {
+            if (pixel.getY() <= image.height) {
+                var red = pixel.getRed();
+                var green = pixel.getGreen();
+                pixel.setRed(green);
+                pixel.setGreen(red);
+            }
+        }
+    }
+    return image;
+}
+
+//print(swapRedGreen("chapel.png"));
+
+var image3 = new SimpleImage("duke_blue_devil.png");
+for (var pixel of image3.values()) {
+    if (pixel.getRed() < 250) {
+        pixel.setBlue(0);
+        pixel.setRed(255);
+        pixel.setGreen(255);
+    }
+}
+//print(image3);
+
+var bgImage = new SimpleImage("dinos.png");
+var fgImage = new SimpleImage("drewRobert.png");
+var output = new SimpleImage(fgImage.width, fgImage.height);
+for (var pixel of fgImage.values()) {
+    if (pixel.getGreen() > 240) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+        var bgPixel = bgImage.getPixel(x, y);
+        output.setPixel(x, y, bgPixel);
+    } else {
+        output.setPixel(pixel.getX(), pixel.getY(), pixel);
+    }
+}
+//print(output);
+
+var img = new SimpleImage(200,200);
+for (var px of img.values()){
+  var x = px.getX();
+  var y = px.getY();
+  if (x < img.getWidth()/2){
+    px.setRed(255);
+  }
+  if (y>img.getHeight()/2){
+    px.setBlue(255);
+  }
+  else if (x>img.getWidth()/2) {
+    px.setGreen(255);
+  }
+}
+//print (img);
+
+function setBlack(pixel) {
+    pixel.setRed(0);
+    pixel.setGreen(0);
+    pixel.setBlue(0);
+    return pixel;
+}
+
+function addBorder(fileName, border) {
+    var image = new SimpleImage(fileName);
+    var width = image.width;
+    var height = image.height;
+    for (var pixel of image.values()) {
+        if (pixel.getX() < border) {
+            setBlack(pixel);
+        }
+        if (pixel.getY() < border) {
+            setBlack(pixel);
+        }
+        if (pixel.getX() > width-border) {
+            setBlack(pixel);
+        }
+        if (pixel.getY() > height-border) {
+            setBlack(pixel);
+        }
+    }
+    return image;
+}
+print(addBorder("chapel.png",10));

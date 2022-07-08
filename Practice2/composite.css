@@ -1,0 +1,16 @@
+h1 {
+    display: flex;
+    text-align: center;
+
+}
+
+canvas {
+    width: 500px;
+    height: 300px;
+    border: 1px black solid;
+}
+
+input {
+    font-size: 14pt;
+}
+

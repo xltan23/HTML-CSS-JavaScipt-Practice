@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Page</title>
+    <link rel="stylesheet" href="/filter.css">
+    <script src="/filter.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+</head>
+<body>
+    <h1>The Joys Of Filtering</h1>
+    <p>
+        <h4>Filter Canvas</h4>
+    </p>
+
+    <div>
+        <canvas id="can1"></canvas>
+    </div>
+    
+    <input type="file" multiple="false" accept="image/*" id="finput" onchange="loadImage()">
+    <p>
+        <input type="button" id="grayscale" value="Grayscale" onclick="makeGray()">
+        <input type="button" id="red" value="Redscale" onclick="makeRed()">
+        <input type="button" id="rainbow" value="Rainbowww" onclick="makeRainbow()">
+        <input type="button" id="redhue" value="Red Hue" onclick="makeRedHue()">
+        <input type="button" id="rainbowhue" value="Rainbow Hue" onclick="makeRainbowHue()">
+        <input type="button" id="reset" value="Reset" onclick="reset()">
+    </p>
+
+</body>
+</html>

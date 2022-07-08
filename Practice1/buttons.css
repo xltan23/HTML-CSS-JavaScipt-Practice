@@ -1,0 +1,31 @@
+h1 {
+    display: flex;
+    background-color: burlywood;
+    justify-content: center;
+    margin: 3%;
+}   
+
+div {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border: 3px black solid;
+    font-family: Arial;
+    color:blue;
+}
+
+#id1 {
+    background-color: lightsteelblue;
+}
+
+#id2 {
+    background-color: lightsalmon;
+}
+
+.blueback {
+    background-color: blue;
+}
+
+.yellowback {
+    background-color: yellow;
+}

@@ -1,0 +1,54 @@
+function phrase3words(v1,v2,v3) {
+    var answer = v1+" "+v2+" "+v3;
+    return answer;
+}
+
+var result1 = phrase3words("Here","We","Go");
+print(result1);
+
+var result2 = phrase3words("Runescape","Is","Fun");
+print(result2);
+
+function reformatName(first, last) {
+    var name = first + ", " + last;
+    return name;
+} 
+
+var name1 = reformatName("Ralph", "Terry");
+print(name1);
+
+function numberPixel(nameFile) {
+    var anImage = new SimpleImage(nameFile);
+    var height = anImage.getHeight();
+    var width = anImage.getWidth();
+    var pixel = height*width;
+    return pixel;
+}
+print(numberPixel("chapel.png"));
+
+function perimeter(nameFile) {
+    var anImage = new SimpleImage(nameFile);
+    var height = anImage.getHeight();
+    var width = anImage.getWidth();
+    var peri = height*2 + width*2;
+    return peri;
+}
+print(perimeter("rodger.png"));
+
+function printPixel(nameFile, xpos, ypos) {
+    var anImage = new SimpleImage(nameFile);
+    print(anImage.getRed(xpos, ypos));
+    print(anImage.getGreen(xpos, ypos));
+    print(anImage.getBlue(xpos, ypos));
+}
+printPixel("drewgreen.png",250,500);
+
+function sumPixel(nameFile, xpos, ypos) {
+    var anImage = new SimpleImage(nameFile);
+    red = anImage.getRed(xpos, ypos);
+    green = anImage.getGreen(xpos, ypos);
+    blue = anImage.getBlue(xpos, ypos);
+    sum = red + green + blue;
+    return sum;
+}
+print(sumPixel("drewgreen.png",250,500));

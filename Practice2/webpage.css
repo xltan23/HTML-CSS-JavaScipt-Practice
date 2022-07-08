@@ -1,0 +1,14 @@
+h1 {
+    font-family: Arial;
+    color: teal;
+}
+
+canvas {
+    width: 800px;
+    height: 500px;
+    border: 1px black solid;
+}
+
+input {
+    font-size: 14pt;
+}
